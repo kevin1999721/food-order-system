@@ -1,19 +1,24 @@
 {
-  "name": "food-order-system",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kevin1999721/food-order-system.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kevin1999721/food-order-system/issues"
-  },
-  "homepage": "https://github.com/kevin1999721/food-order-system#readme"
+	"name": "food-order-system",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"author": "Kevin huang",
+	"license": "ISC",
+	"scripts": {
+		"server": "npm start --prefix server",
+		"client": "npm start --prefix client",
+		"start": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"dependencies": {
+		"concurrently": "^8.2.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/kevin1999721/food-order-system.git"
+	},
+	"bugs": {
+		"url": "https://github.com/kevin1999721/food-order-system/issues"
+	},
+	"homepage": "https://github.com/kevin1999721/food-order-system#readme"
 }
