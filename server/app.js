@@ -12,8 +12,10 @@ function MockDatabase() {
 		orderLists: [],
 	};
 
-	this.isnertListIntoOrderLists = function (newOrderListItme) {
-		this.tables.orderLists.push(newOrderListItme);
+	this.orderListsIndex = 0;
+
+	this.isnertListIntoOrderLists = function (newOrderList) {
+		this.tables.orderLists.push(newOrderList);
 	};
 
 	this.deleteListFromOrderLists = function (deleteId) {
@@ -42,9 +44,13 @@ app.get('/orderLists', (req, res) => {
 
 app.post('/orderLists', (req, res) => {
 	try {
-		const item = req.body;
-		if (item) {
-			mockDatabase.isnertListIntoOrderLists(item);
+		const newOrderList = req.body;
+		if (newOrderList) {
+			mockDatabase.isnertListIntoOrderLists({
+				id: ++mockDatabase.orderListsIndex,
+				...newOrderList,
+				createAt: new Date().toISOString(),
+			});
 			res.status(201).send(mockDatabase.tables.orderLists);
 		} else {
 			res.status(400).send('Please check body format');
