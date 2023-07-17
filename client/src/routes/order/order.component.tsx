@@ -10,6 +10,7 @@ const Order = () => {
 
 	return (
 		<Box
+			data-testid="order"
 			sx={{
 				display: 'flex',
 				gap: '20px',
