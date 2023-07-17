@@ -38,7 +38,7 @@ const CartItem: FC<CartItemProps> = ({ cartItem }) => {
 			}}
 		>
 			<Box>
-				<IconButton onClick={onRemoveButtonClick}>
+				<IconButton aria-label="remove" onClick={onRemoveButtonClick}>
 					<CloseIcon />
 				</IconButton>
 			</Box>
@@ -53,13 +53,13 @@ const CartItem: FC<CartItemProps> = ({ cartItem }) => {
 					marginLeft: 'auto',
 				}}
 			>
-				<IconButton onClick={onDecreaseButtonClick}>
+				<IconButton aria-label="decrease" onClick={onDecreaseButtonClick}>
 					<RemoveIcon />
 				</IconButton>
 				<Typography fontWeight={600} width={'20px'} textAlign={'center'}>
 					{quantity}
 				</Typography>
-				<IconButton onClick={onIncreaseButtonClick}>
+				<IconButton aria-label="increase" onClick={onIncreaseButtonClick}>
 					<AddIcon />
 				</IconButton>
 			</Box>
