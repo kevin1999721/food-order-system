@@ -20,7 +20,7 @@
 * testing-library/react : ^14.0.0
 # Installation
 
-使用 npm 作為套件管理工具，專案將 server 及 client 分開放置個別的資料夾，所以您需到個別的目錄輸入 npm install ，來安裝個別需要的 package。
+專案使用 npm 作為套件管理工具，並將 server 及 client 分開放置個別的資料夾，所以您需到個別的目錄輸入 npm install ，來安裝個別需要的 package。
 
 另外也需要在根目錄 ./food-order-system 輸入 npm install 來安裝 package，這裡所安裝套件是 " concurrently "，目的是為了幫助我們同時啟動 server 及 client，這樣就不用到個別的目錄來啟動。
 
@@ -34,7 +34,7 @@ npm install
 
 #### root ( ./food-order-system )
 ```bash
-npm start  # 同期啟動 server 及 client  
+npm start  # 同時啟動 server 及 client  
 npm run server # 啟動 server
 npm run client # 啟動 client
 
