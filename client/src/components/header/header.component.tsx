@@ -34,10 +34,14 @@ const Header = () => {
 	return (
 		<Box component={'header'} sx={{ display: 'flex', alignItems: 'center', height: '75px' }}>
 			<Box marginLeft={'auto'}>
-				<IconButton onClick={onHistoryButtonClick}>
+				<IconButton aria-label="history button" onClick={onHistoryButtonClick}>
 					<PlaylistAddCheckIcon />
 				</IconButton>
-				<IconButton onClick={onCartButtonClick} sx={{ position: 'relative' }}>
+				<IconButton
+					aria-label="cart button"
+					onClick={onCartButtonClick}
+					sx={{ position: 'relative' }}
+				>
 					<ShoppingCartIcon />
 					{cartItemsCount > 0 && (
 						<Typography
