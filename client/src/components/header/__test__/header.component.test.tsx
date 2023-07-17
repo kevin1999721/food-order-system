@@ -21,7 +21,7 @@ describe('header component test !', () => {
 		expect(screen.getByText('8')).toBeInTheDocument();
 	});
 
-	test('it should show render History component when click history button', async () => {
+	test('it should render History component when click history button', async () => {
 		renderWithProviders(<Header />);
 
 		const historyButton = screen.getByLabelText('history button');
@@ -30,7 +30,7 @@ describe('header component test !', () => {
 		expect(screen.getByTestId('history')).toBeInTheDocument();
 	});
 
-	test('it should show render Cart component when click cart button', async () => {
+	test('it should render Cart component when click cart button', async () => {
 		renderWithProviders(<Header />);
 
 		const cartButton = screen.getByLabelText('cart button');
