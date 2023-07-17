@@ -10,6 +10,7 @@ const History = () => {
 
 	return (
 		<Box
+			data-testid="history"
 			sx={{
 				display: 'flex',
 				flexDirection: 'column',

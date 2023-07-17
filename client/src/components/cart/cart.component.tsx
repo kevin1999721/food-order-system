@@ -35,7 +35,10 @@ const Cart = () => {
 	};
 
 	return (
-		<Box sx={{ maxWidth: '100%', minWidth: '300px', width: '380px', padding: '20px 10px' }}>
+		<Box
+			data-testid="cart"
+			sx={{ maxWidth: '100%', minWidth: '300px', width: '380px', padding: '20px 10px' }}
+		>
 			<Box sx={{ height: '250px', overflow: 'auto' }}>
 				{cartItems.length > 0 ? (
 					cartItems.map(cartItem => <CartItem key={cartItem.id} cartItem={cartItem} />)

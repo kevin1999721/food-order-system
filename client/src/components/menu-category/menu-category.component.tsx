@@ -3,7 +3,7 @@ import { Category, CategoryItem } from '../../store/stores/stores.slice';
 
 import { Box, Typography, Divider } from '@mui/material';
 
-import MenuCategoryItem from '../menu-category-item/menu-category-item';
+import MenuCategoryItem from '../menu-category-item/menu-category-item.component';
 
 type MenuCategoryProps = {
 	category: Category;
